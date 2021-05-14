@@ -14,6 +14,8 @@ import upload from './upload';
 import ImageInput from './imageInput';
 import urlInput from './urlInput';
 import Html from './html';
+
+import  LabelAndValue from '../protop/labelAndValueSetting'
 import {
   InputNumber,
   Checkbox,
@@ -77,6 +79,7 @@ export const widgets = {
   rate: Rate,
   treeSelect: FrTreeSelect,
   cascader: FrCascader,
+  labelAndValue:LabelAndValue
 };
 
 export const defaultWidgetNameList = Object.keys(widgets);

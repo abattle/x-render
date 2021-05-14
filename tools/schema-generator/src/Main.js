@@ -104,9 +104,18 @@ function App(props, ref) {
       }, 0);
     }
   };
-
-  const _mapping = { ...defaultMapping, ...mapping };
-  const _widgets = { ...defaultWidgets, ...widgets, list };
+  const labSetting = (p)=>{
+    console.log(p);
+    return <div>
+      <div onClick={()=>{
+        p.onChange([{label:"hhhhh",value:"新的值"},{label:"新的标签1",value:"新的值1"},{label:"新的标签2",value:"新的值2"},{label:"新的标签3",value:"新的值3"}])
+      }}>
+        按钮
+      </div>
+    </div>
+  }
+  const _mapping = { ...defaultMapping, ...mapping ,"labSetting":"labSetting"};
+  const _widgets = { ...defaultWidgets, ...widgets, list ,labSetting};
 
   const rootState = {
     preview,

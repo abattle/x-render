@@ -71,6 +71,37 @@ export const defaultCommonSettings = {
 
 export const elements = [
   {
+    text: '自定义',
+    name: 'input',
+    widget: 'labelAndValue',
+    schema: {
+      title: '输入框',
+      type: 'string',
+      widget: 'labelAndValue',
+      renderData:[{
+        label:'我是标签',
+        value:"我是值"
+      },{
+        label:'我是标签1',
+        value:"我是值1"
+      },{
+        label:'我是标签2',
+        value:"我是值2"
+      }]
+    },
+    setting: {
+      renderData: {
+        title: '选项字段',
+        type: 'array',
+        renderData: [],
+        widget: 'labSetting',
+        props: {
+          mode: 'tags',
+        },
+      },
+    }
+  },
+  {
     text: '输入框',
     name: 'input',
     widget: 'input',
