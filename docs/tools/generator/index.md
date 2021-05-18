@@ -28,10 +28,7 @@ const defaultValue = {
   schema: {
     type: 'object',
     properties: {
-      inputName: {
-        title: '简单输入框',
-        type: 'string',
-      },
+      
     },
   },
   displayType: 'row',

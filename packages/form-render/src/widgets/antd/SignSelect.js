@@ -27,10 +27,10 @@ const mapProps = ({ schema, style, options: _options }) => {
   };
 };
 
-const labelAndValueSetting =(p)=>{
+const SignSelect =(p)=>{
   let {schema} = p
   let {renderData} =schema
-  console.log(p);
+  // console.log(p);
   return <div>
     <Select defaultValue={schema.default} style={{width: "100%"}} onChange={p.onChange}>
       {
@@ -41,4 +41,4 @@ const labelAndValueSetting =(p)=>{
     </Select>
   </div>
 }
-export default createWidget(mapProps)(labelAndValueSetting);
+export default createWidget(mapProps)(SignSelect);

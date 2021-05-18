@@ -51,7 +51,7 @@ export default function Right() {
       <ToggleIcon />
       <Tabs defaultActiveKey="1" onChange={() => {}}>
         {showItemSettings && (
-          <TabPane tab="组件配置" key="1">
+          <TabPane tab="组件配置" key="1" className="design-wapper">
             <ItemSettings />
           </TabPane>
         )}

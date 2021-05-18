@@ -3,7 +3,7 @@ import { useStore } from '../hooks';
 import RenderChildren from './RenderChildren';
 import RenderField from './RenderField';
 import Wrapper from './Wrapper';
-
+import logo from './logo.svg'
 const FR = ({ id = '#', preview = false }) => {
   const { flatten, frProps = {} } = useStore();
   const { displayType, column } = frProps;
@@ -113,9 +113,13 @@ const FR = ({ id = '#', preview = false }) => {
     return (
       <Wrapper style={columnStyle} $id={id} item={item}>
         <div
-          className={`${containerClass} h-100 f4 black-40 flex items-center justify-center`}
+          className={`${containerClass} h-100 f4 black-40 flex items-center justify-center copyright`}
+          style={{ flexDirection: 'column' }}
         >
-          点击/拖拽左侧栏的组件进行添加
+          <img src={logo} alt="" width="50%" />
+          <span style={{ fontSize: '16px', marginTop: '16px' }}>
+            点击/拖拽左侧栏的组件进行添加
+          </span>
         </div>
       </Wrapper>
     );

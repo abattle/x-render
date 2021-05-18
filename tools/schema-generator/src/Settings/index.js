@@ -22,85 +22,54 @@ export const defaultCommonSettings = {
     title: '必填',
     type: 'boolean',
   },
-  placeholder: {
-    title: '占位符',
-    type: 'string',
-  },
-  bind: {
-    title: 'Bind',
-    type: 'string'
-  },
-  min: {
-    title: '最小值',
-    type: 'number'
-  },
-  max: {
-    title: '最大值',
-    type: 'number'
-  },
-  disabled: {
-    title: '禁用',
-    type: 'boolean',
-  },
-  readOnly: {
-    title: '只读',
-    type: 'boolean',
-  },
-  hidden: {
-    title: '隐藏',
-    type: 'boolean',
-  },
-  width: {
-    title: '元素宽度',
-    type: 'string',
-    widget: 'percentSlider',
-  },
-  labelWidth: {
-    title: '标签宽度',
-    description: '默认值120',
-    type: 'number',
-    widget: 'slider',
-    max: 400,
-    props: {
-      hideNumber: true,
-    },
-  },
+  // placeholder: {
+  //   title: '占位符',
+  //   type: 'string',
+  // },
+  // bind: {
+  //   title: 'Bind',
+  //   type: 'string'
+  // },
+  // min: {
+  //   title: '最小值',
+  //   type: 'number'
+  // },
+  // max: {
+  //   title: '最大值',
+  //   type: 'number'
+  // },
+  // disabled: {
+  //   title: '禁用',
+  //   type: 'boolean',
+  // },
+  // readOnly: {
+  //   title: '只读',
+  //   type: 'boolean',
+  // },
+  // hidden: {
+  //   title: '隐藏',
+  //   type: 'boolean',
+  // },
+  // width: {
+  //   title: '元素宽度',
+  //   type: 'string',
+  //   widget: 'percentSlider',
+  // },
+  // labelWidth: {
+  //   title: '标签宽度',
+  //   description: '默认值120',
+  //   type: 'number',
+  //   widget: 'slider',
+  //   max: 400,
+  //   props: {
+  //     hideNumber: true,
+  //   },
+  // },
 };
 
 // widget 用于schema中每个元素对应的右侧配置知道用哪个setting
 
 export const elements = [
-  {
-    text: '自定义',
-    name: 'input',
-    widget: 'labelAndValue',
-    schema: {
-      title: '输入框',
-      type: 'string',
-      widget: 'labelAndValue',
-      renderData:[{
-        label:'我是标签',
-        value:"我是值"
-      },{
-        label:'我是标签1',
-        value:"我是值1"
-      },{
-        label:'我是标签2',
-        value:"我是值2"
-      }]
-    },
-    setting: {
-      renderData: {
-        title: '选项字段',
-        type: 'array',
-        renderData: [],
-        widget: 'labSetting',
-        props: {
-          mode: 'tags',
-        },
-      },
-    }
-  },
   {
     text: '输入框',
     name: 'input',
@@ -604,12 +573,72 @@ const saves = [
   },
 ];
 
+
+export const inputElement =[
+  {
+    text: '下拉单选',
+    name: 'input',
+    widget: 'SignSelect',
+    schema: {
+      title: '下拉单选',
+      type: 'string',
+      widget: 'SignSelect',
+      renderData:[{
+        label:'我是标签',
+        value:"我是值"
+      },{
+        label:'我是标签1',
+        value:"我是值1"
+      },{
+        label:'我是标签2',
+        value:"我是值2"
+      }]
+    },
+    setting: {
+      renderData: {
+        title: '选项字段',
+        type: 'array',
+        renderData: [],
+        widget: 'labSetting',
+      },
+    }
+  },
+  {
+    text: '点击单选',
+    name: 'input',
+    widget: 'SignRadio',
+    schema: {
+      title: '点击单选',
+      type: 'string',
+      widget: 'SignRadio',
+      renderData:[{
+        label:'选项',
+        value:"我是值"
+      },{
+        label:'选项1',
+        value:"我是值1"
+      },{
+        label:'选项2',
+        value:"我是值2"
+      }]
+    },
+    setting: {
+      renderData: {
+        title: '选项字段',
+        type: 'array',
+        renderData: [],
+        widget: 'labSetting',
+      },
+    }
+  },
+]
+
 export const defaultSettings = [
   {
-    title: '基础组件',
-    widgets: elements,
+    title: '自定义',
+    widgets: inputElement,
     show: true,
-    useCommon: true, // TODO: 是否将common
+    useCommon: false, // TODO: 是否将common
   },
   {
     title: '高级组件',

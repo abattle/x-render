@@ -3,8 +3,10 @@ import { useSet } from './hooks';
 // import SCHEMA from './json/basic.json';
 import FRWrapper from './FRWrapper';
 import { fromFormRender, toFormRender } from './transformer/form-render';
-import { widgets as defaultWidgets, mapping as defaultMapping } from 'form-render';
+import { widgets as defaultWidgets ,mapping as defaultMapping} from 'form-render';
+
 import list from './widgets/antd/list';
+import labSetting from  './widgets/protop/LabelAndValueSetting'
 import './atom.less';
 import './Main.less';
 import 'antd/dist/antd.less';
@@ -104,18 +106,12 @@ function App(props, ref) {
       }, 0);
     }
   };
-  const labSetting = (p)=>{
-    console.log(p);
-    return <div>
-      <div onClick={()=>{
-        p.onChange([{label:"hhhhh",value:"新的值"},{label:"新的标签1",value:"新的值1"},{label:"新的标签2",value:"新的值2"},{label:"新的标签3",value:"新的值3"}])
-      }}>
-        按钮
-      </div>
-    </div>
-  }
-  const _mapping = { ...defaultMapping, ...mapping ,"labSetting":"labSetting"};
-  const _widgets = { ...defaultWidgets, ...widgets, list ,labSetting};
+
+  // console.log("defaultMapping",defaultMapping)
+  // console.log("defaultWidgets",defaultWidgets)
+
+   const _mapping = { ...defaultMapping, ...mapping ,"labSetting":"labSetting"};
+   const _widgets = { ...defaultWidgets, ...widgets, list ,labSetting};
 
   const rootState = {
     preview,

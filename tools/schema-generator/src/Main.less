@@ -47,3 +47,32 @@
     overflow-y: auto;
   }
 }
+/*拖动框滚动条*/
+.dnd-container ::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.dnd-container ::-webkit-scrollbar-thumb {
+  background-color: #DDDDDD;
+  border-radius: 5px;
+}
+
+.dnd-container ::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+/*拖动框滚动条*/
+
+.dnd-container .ant-tabs-content-holder {
+  flex-grow: 1;
+}
+
+.dnd-container .ant-tabs-content.ant-tabs-content-top {
+  height: 100%;
+}
+
+.dnd-container .ant-tabs-tabpane.ant-tabs-tabpane-active {
+  height: 100%;
+  overflow-y: auto;
+}

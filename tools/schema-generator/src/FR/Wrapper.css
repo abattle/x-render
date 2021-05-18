@@ -11,3 +11,9 @@
 .fr-generator-container .dnd-container > .field-wrapper > .fr-field {
   margin: 0;
 }
+.copyright{
+  background-color: #FFF;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}

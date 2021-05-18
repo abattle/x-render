@@ -15,7 +15,8 @@ import ImageInput from './imageInput';
 import urlInput from './urlInput';
 import Html from './html';
 
-import  LabelAndValue from '../protop/labelAndValueSetting'
+import  SignSelect from './SignSelect'
+import SignRadio from './SignRadio';
 import {
   InputNumber,
   Checkbox,
@@ -79,7 +80,8 @@ export const widgets = {
   rate: Rate,
   treeSelect: FrTreeSelect,
   cascader: FrCascader,
-  labelAndValue:LabelAndValue
+  SignSelect:SignSelect,
+  SignRadio:SignRadio
 };
 
 export const defaultWidgetNameList = Object.keys(widgets);

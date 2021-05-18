@@ -3063,15 +3063,16 @@ var mapProps$3 = function mapProps(_ref) {
 };
 
 var labelAndValueSetting = function labelAndValueSetting(p) {
-  console.log("labelAndValueSetting", p);
-  var _p$schema = p.schema,
-      schema = _p$schema === void 0 ? {} : _p$schema;
-  var _schema$rederData = schema.rederData,
-      rederData = _schema$rederData === void 0 ? [] : _schema$rederData;
-  console.log(rederData);
-  return /*#__PURE__*/React.createElement("div", null, "myselect", /*#__PURE__*/React.createElement(_Select, {
-    defaultValue: schema.default
-  }, rederData.map(function (item, index) {
+  var schema = p.schema;
+  var renderData = schema.renderData;
+  console.log(p);
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Select, {
+    defaultValue: schema.default,
+    style: {
+      width: "100%"
+    },
+    onChange: p.onChange
+  }, renderData.map(function (item, index) {
     return /*#__PURE__*/React.createElement(Option, {
       value: item.value,
       key: "".concat(index)
